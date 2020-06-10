@@ -1,0 +1,28 @@
+body {
+	font-family: 'Merriweather', serif;
+}
+
+.main-header {
+	display: flex;
+	flex-direction: column;
+}
+
+h2,
+.tagline {
+	align-self: center;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.title {
+	background-color: #001360;
+	color: #ebdfdb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
