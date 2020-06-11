@@ -4,19 +4,36 @@
 
 body {
 	font-family: 'Merriweather', serif;
-	max-width: 768px;
 	margin: 0 auto;
-	font-weight: 300;
-	background-color: #ebdfdb;
+	display: flex;
+	flex-direction: column;
+	font-weight: 100;
+	background-color: #F7FAF9;
+	
 }
+
+
 
 h1 {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
-input {
+input,
+select {
 	border: 1px solid white;
+	border-radius: 10px;
+}
+
+select option:first-child{
+	color: gray;
+}
+
+.sign-up {
+	/* max-width: 900px; */
+	width: 75%;
+	margin: 0 auto;
+	
 }
 
 .main-header,
@@ -26,27 +43,60 @@ input {
 	flex-direction: column;
 }
 
-.contact-info input {
+.contact-info input,
+select,
+button {
 	height: 50px;
 	margin-bottom: 15px;
 }
 
 h2,
 .tagline {
-	align-self: center;
 	text-align: center;
+	
+}
+
+textarea {
+	border-style: none;
+	border-color: transparent;
+	overflow: auto;
+	margin: 10px 0;
+}
+
+.tagline,
+label,
+p {
+	color: lightslategrey;
 }
 
 .title {
 	background-color: #001360;
-	color: #ebdfdb;
+	color: #F7FAF9;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 20px;
+	max-width: none;
 }
 
 .item {
 	display: flex;
+	align-items: center;
+}
+
+
+
+.tagline {
+	border-bottom: 2px double midnightblue;
+	padding-bottom: 18px;
+	margin-bottom: 2px;
+	align-items: center;
+
+}
+
+fieldset {
+	margin: 1em 1em;;
+	padding: 50px 0 10px;
 }
 
 .field {
@@ -63,10 +113,17 @@ h2,
 .topics {
 	display: flex;
 	flex-direction: column;
+	margin-top: 20px;
 }
 
 .light {
 	padding: 5px;
+
+}
+
+.contact-info {
+	border-bottom: 2px solid midnightblue;
+
 }
 
 .contact-info .flex-pair {
@@ -78,10 +135,34 @@ h2,
 	margin-bottom: 10px;
 }
 
+button {
+	width: 100%;
+	background-color: rgb(64, 226, 99);
+	color: white;
+	border: none;
+	margin-top: 5px;
+}
+
 footer {
 	text-align: center;
 }
 
 #zip {
 	width: 50%;
+}
+
+@media (min-width: 768px) {
+.contact-info .flex-pair {
+	flex-direction: row;
+	align-items: center;
+}
+
+.contact-info input {
+	flex-grow: 2;
+}
+
+.contact-info label {
+	flex-grow: 1;
+	
+}
 }
