@@ -19,26 +19,28 @@
     </header>
 
     <main>
+        <div class="wrapper">
         <form action="index.html" method="POST" class="reg-form">
-            
+            <fieldset class="contact-info">
+                <legend>Contact Information</legend>
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="user_name">
+            <input class="field" type="text" id="full-name" name="user_name">
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="user_email">
+            <input class="field" type="email" id="email" name="user_email">
 
             <label for="telephone">Phone Number</label>
-            <input type="tel" id="telephone" name="user_telephone">
+            <input class="field" type="tel" id="telephone" name="user_telephone">
 
             <label for="street-address">Street Address</label>
-            <input type="address" id="street-address" name="user_address">
+            <input class="field" type="address" id="street-address" name="user_address">
 
 
             <label for="city">City</label>
-            <input type="text" id="city" name="user_city">
+            <input class="field" type="text" id="city" name="user_city">
 
             <label for="state-select">State</label>
-            <select name="states" id="state-select">
+            <select class="field" name="states" id="state-select">
                 <option value="">Choose State</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -94,9 +96,34 @@
             </select>
 
             <label for="zip">Zip Code</label>
-            <input type="number" name="zip" id="zip">
-       
+            <input class="field" type="number" name="zip" id="zip">
+            </fieldset>
+
+            <fieldset>
+                <p>Select the newsletters you would like to receive</p>
+                <input type="checkbox" id="html_news" value="html_news" name="newsletter">
+                <label for="html_news" class="light">HTML News</label>
+                <input type="checkbox" id="css_news" value="css_news" name="newsletter">
+                <label for="css_news" class="light">CSS News</label>
+                <input type="checkbox" id="javascript_news" value="javascript_news" name="newsletter">
+                <label for="javascript_news" class="light">Javascript News</label>
+
+                <p>Newsletter format</p>
+                <input type="radio" id="html_radio" value="html_radio" name="nl_pref"> 
+                <label for="html_radio" class="light">HTML</label>
+                <input type="radio" id="text_radio" value="text_radio" name="nl_pref"> 
+                <label for="text_radio" class="light">Plain text</label>
+
+                <p>Other topics you'd like to hear about</p>
+                <textarea name="other_topics" id="other_topics" cols="30" rows="10"></textarea>
+
+                <button type="submit">Sign Up</button>
+            </fieldset>
         </form>
+    </div>
+    <footer>
+        <p>Copyright The Code Review</p>
+    </footer>
     </main>
     
 </body>

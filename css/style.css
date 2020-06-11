@@ -2,7 +2,13 @@ body {
 	font-family: 'Merriweather', serif;
 }
 
-.main-header {
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.main-header,
+.contact-info {
 	display: flex;
 	flex-direction: column;
 }
@@ -25,4 +31,15 @@ form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.field {
+	flex-grow: 1;
+	margin-bottom: 20px;
+	margin-right: 0;
+}
+
+.contact-info {
+	padding: 50px 50px 35px 50px;
+	border: none;
 }
