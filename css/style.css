@@ -1,3 +1,5 @@
+/*--- Layout styles ---*/
+
 * {
 	box-sizing: border-box;
 }
@@ -8,32 +10,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	font-weight: 100;
-	background-color: #F7FAF9;
-	
 }
-
-
 
 h1 {
 	padding-top: 20px;
 	padding-bottom: 20px;
-}
-
-input,
-select {
-	border: 1px solid white;
-	border-radius: 10px;
-}
-
-select option:first-child{
-	color: gray;
-}
-
-.sign-up {
-	/* max-width: 900px; */
-	width: 75%;
-	margin: 0 auto;
-	
+	text-transform: uppercase;
+	font-size: 1.6em;
 }
 
 .main-header,
@@ -43,6 +26,42 @@ select option:first-child{
 	flex-direction: column;
 }
 
+.sign-up {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.item {
+	display: flex;
+	align-items: center;
+}
+
+.field {
+	flex-grow: 1;
+	margin-bottom: 20px;
+}
+
+/*--- Input styles ---*/
+
+input,
+select,
+textarea,
+button {
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: rgb(241, 241, 241);
+	padding-right: 10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	outline:none;
+	border: 2px inset midnightblue;       /* creates focus effect on inputs */
+	transform: scale(1.01,1.01);
+	transition: all 0.3s;
+}
+
 .contact-info input,
 select,
 button {
@@ -50,10 +69,19 @@ button {
 	margin-bottom: 15px;
 }
 
-h2,
-.tagline {
-	text-align: center;
-	
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+	text-align: right;
+	font-style: italic;
+}
+
+textarea {
+	padding: 7px;
+}
+
+select:invalid,
+select option[value=""] {         /* grays out placeholder on state dropdown */
+  color: #999999;
 }
 
 textarea {
@@ -63,10 +91,26 @@ textarea {
 	margin: 10px 0;
 }
 
+button {
+	width: 100%;
+	background-color: rgb(64, 226, 99);
+	color: white;
+	border: none;
+	margin-top: 5px;
+}
+
+/*--- Base styles ---*/
+
+h2,
+.tagline {
+	text-align: center;
+}
+
 .tagline,
 label,
 p {
 	color: lightslategrey;
+	padding: 5px;
 }
 
 .title {
@@ -79,35 +123,17 @@ p {
 	max-width: none;
 }
 
-.item {
-	display: flex;
-	align-items: center;
-}
-
-
-
 .tagline {
 	border-bottom: 2px double midnightblue;
 	padding-bottom: 18px;
 	margin-bottom: 2px;
 	align-items: center;
-
-}
-
-fieldset {
-	margin: 1em 1em;;
-	padding: 50px 0 10px;
-}
-
-.field {
-	flex-grow: 1;
-	margin-bottom: 20px;
 }
 
 .contact-info,
 .preferences {
 	border: none;
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
 .topics {
@@ -116,14 +142,8 @@ fieldset {
 	margin-top: 20px;
 }
 
-.light {
-	padding: 5px;
-
-}
-
 .contact-info {
 	border-bottom: 2px solid midnightblue;
-
 }
 
 .contact-info .flex-pair {
@@ -133,14 +153,6 @@ fieldset {
 
 .contact-info label {
 	margin-bottom: 10px;
-}
-
-button {
-	width: 100%;
-	background-color: rgb(64, 226, 99);
-	color: white;
-	border: none;
-	margin-top: 5px;
 }
 
 footer {
@@ -158,11 +170,20 @@ footer {
 }
 
 .contact-info input {
-	flex-grow: 2;
+	flex-grow: 1;
+	flex-basis: 75%;
 }
 
 .contact-info label {
-	flex-grow: 1;
-	
+	flex-basis: 25%;
+}
+
+.sign-up {
+	width: 75%;
+	max-width: 800px;
+}
+
+#zip {
+	max-width: 25%;
 }
 }

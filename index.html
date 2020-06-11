@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>The Code Review</title>
@@ -24,7 +24,7 @@
         
             <form action="index.html" method="POST" class="reg-form">
                 <fieldset class="contact-info">
-                    <legend>Contact Information</legend>
+                    <legend><h2>Contact Information</h2></legend>
                 <div class="flex-pair">         
                     <label for="full-name">Full Name</label>
                     <input class="field" type="text" id="full-name" name="user_name" placeholder="required" required>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="flex-pair">     
                     <label for="street-address">Street Address</label>
-                    <input class="field" type="address" id="street-address" name="user_address">
+                    <input class="field" type="text" id="street-address" name="user_address">
                 </div>
                 <div class="flex-pair">     
                     <label for="city">City</label>
@@ -47,8 +47,8 @@
                 </div>
                 <div class="flex-pair">
                     <label for="state-select">State</label>
-                        <select class="field" name="states" id="state-select" required>
-                            <option value="">Choose State</option>
+                        <select class="field" name="states" id="state-select">
+                            <option value="" selected disabled hidden>Choose State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -104,12 +104,12 @@
                     </div>
                 <div class="flex-pair">    
                     <label for="zip">Zip Code</label>
-                    <input class="field" type="number" name="zip" id="zip">
+                    <input class="field" type="text" name="zip" id="zip">
                 </div>
                 </fieldset>
 
                 <fieldset class="preferences">
-                    <legend>Newsletter</legend>
+                    <legend><h2>Newsletter</h2></legend>
                     <p>Select the newsletters you would like to receive</p>
                     <div class="item">
                         <input type="checkbox" id="html_news" value="html_news" name="newsletter">
@@ -135,7 +135,7 @@
                     </div>
                     <div class="topics">
                         <label for="other_topics">Other topics you'd like to hear about</label>
-                        <textarea name="other_topics" id="other_topics" cols="30" rows="10"></textarea>
+                        <textarea name="other_topics" id="other_topics" cols="30" rows="10" placeholder="Let us know what else you're interested in!"></textarea>
                     </div>
                     <button class="submit" type="submit">Sign Up</button>
                 </fieldset>
@@ -143,7 +143,7 @@
    
 
     <footer>
-        <p>Copyright The Code Review</p>
+        <p><em>Copyright The Code Review</em></p>
     </footer>
     </main>
     
