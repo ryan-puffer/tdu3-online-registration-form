@@ -1,5 +1,15 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Merriweather', serif;
+	margin: 0 auto;
+	font-weight: 300;
+}
+
+input {
+	border: 1px solid white;
 }
 
 .wrapper {
@@ -8,7 +18,8 @@ body {
 }
 
 .main-header,
-.contact-info {
+.contact-info,
+.preferences {
 	display: flex;
 	flex-direction: column;
 }
@@ -19,12 +30,6 @@ h2,
 	text-align: center;
 }
 
-form {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
 .title {
 	background-color: #001360;
 	color: #ebdfdb;
@@ -33,13 +38,26 @@ form {
 	align-items: center;
 }
 
+.item {
+	display: flex;
+}
+
 .field {
 	flex-grow: 1;
 	margin-bottom: 20px;
-	margin-right: 0;
 }
 
-.contact-info {
+.contact-info,
+.preferences {
 	padding: 50px 50px 35px 50px;
 	border: none;
+}
+
+.light {
+	padding: 5px;
+}
+
+.contact-info .flex-pair {
+	display: flex;
+	flex-direction: column;
 }
