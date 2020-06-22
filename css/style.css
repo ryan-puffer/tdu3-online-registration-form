@@ -56,9 +56,9 @@ button {
 input:focus,
 select:focus,
 textarea:focus {
-	outline:none;
-	border: 2px inset midnightblue;       /* creates focus effect on inputs */
-	transform: scale(1.01,1.01);
+	outline: none;
+	border: 2px inset midnightblue; /* creates focus effect on inputs */
+	transform: scale(1.01, 1.01);
 	transition: all 0.3s;
 }
 
@@ -80,8 +80,9 @@ textarea {
 }
 
 select:invalid,
-select option[value=""] {         /* grays out placeholder on state dropdown */
-  color: #999999;
+select option[value=""] {
+	/* grays out placeholder on state dropdown */
+	color: #999999;
 }
 
 textarea {
@@ -97,6 +98,11 @@ button {
 	color: white;
 	border: none;
 	margin-top: 5px;
+	transition: box-shadow .3s;
+}
+
+button:hover {
+	box-shadow: 3px 3px 5px black;
 }
 
 /*--- Base styles ---*/
@@ -115,7 +121,7 @@ p {
 
 .title {
 	background-color: #001360;
-	color: #F7FAF9;
+	color: #f7faf9;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -133,7 +139,10 @@ p {
 .contact-info,
 .preferences {
 	border: none;
-	padding-top: 40px;
+}
+
+.color-wrap {
+	background-color: whitesmoke;
 }
 
 .topics {
@@ -164,26 +173,26 @@ footer {
 }
 
 @media (min-width: 768px) {
-.contact-info .flex-pair {
-	flex-direction: row;
-	align-items: center;
-}
+	.contact-info .flex-pair {
+		flex-direction: row;
+		align-items: center;
+	}
 
-.contact-info input {
-	flex-grow: 1;
-	flex-basis: 75%;
-}
+	.contact-info input {
+		flex-grow: 1;
+		flex-basis: 75%;
+	}
 
-.contact-info label {
-	flex-basis: 25%;
-}
+	.contact-info label {
+		flex-basis: 25%;
+	}
 
-.sign-up {
-	width: 75%;
-	max-width: 800px;
-}
+	.sign-up {
+		width: 75%;
+		max-width: 800px;
+	}
 
-#zip {
-	max-width: 25%;
-}
+	#zip {
+		max-width: 25%;
+	}
 }
